@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Fondo gris claro suave */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Espacio para que el header del Home no tape el contenido */
+}
+
+.titulo{
+    text-align: center;
+    color: #6e2b2b;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+.link{
+    color: #4b73bd;
+    text-decoration: none;
+    font-family: 'Times New Roman', sans-serif;
+    align-self: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: #35548c;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 350px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.formulario label{
+    align-self: flex-start; 
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.formulario input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    outline: none;
+}
+
+.formulario input:focus{
+    border-color: #91c9e4; 
+    box-shadow: 0 0 5px rgba(145, 201, 228, 0.5);
+}
+
+.boton{
+    background-color: #91c9e4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 0; 
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover{
+    background-color: #7ab5d1;
+}
+
+.boton a{
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    background-color: #2c3e50;
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a{
+    color: #91c9e4;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover{
+    background-color: #91c9e4;
+    color: #2c3e50;
+}
