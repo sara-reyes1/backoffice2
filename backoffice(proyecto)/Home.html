@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+  <header class="navbar">
+    <h2>Backoffice</h2>
+    <button id="logoutBtn" class="cerrar">Cerrar Sesión</button>
+  </header>
+
+  <div class="proyectos-container">
+    <div class="proyectos-header">
+      <h1>Mis Proyectos</h1>
+      <button id="openModalBtn" class="agregar">+ Agregar Proyecto</button>
+    </div>
+
+    <section id="projectsGrid" class="ejemplos-grid">
+      <article class="ejemplo-card">
+        <h3>Proyecto de Ejemplo</h3>
+        <p class="ejemplo">Descripción breve del proyecto registrado en el backoffice.</p>
+        <span class="ejemplo">HTML / CSS / JS</span>
+        <div class="ejemplo-actions">
+          <button class="ejemplo">Actualizar</button>
+          <button class="ejemplo">Eliminar</button>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <div id="projectModal" class="agregar-proyecto-modal">
+    <div class="agregar-proyecto-content">
+      <h2 id="modalTitle">Agregar Proyecto</h2>
+      <form id="projectForm">
+        <div>
+          <label for="projectTitle">Título del proyecto</label>
+          <input type="text" id="projectTitle" required>
+        </div>
+        <div>
+          <label for="projectDesc">Descripción</label>
+          <textarea id="projectDesc" rows="3" required></textarea>
+        </div>
+        <div>
+          <label for="projectTech">Tecnologías</label>
+          <input type="text" id="projectTech" required>
+        </div>
+        <div>
+          <label for="projectRepo">URL del repositorio (opcional)</label>
+          <input type="url" id="projectRepo" >
+        </div>
+        <div>
+          <label for="projectImages">URL de la imagen (opcional)</label>
+          <input type="url" id="projectImages">
+        </div>
+        <div class="cancelar-guardar">
+          <button type="button" id="closeModalBtn" class="cancelar">Cancelar</button>
+          <button type="submit" class="guardar">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="home.js"></script>
+</body>
+</html>
