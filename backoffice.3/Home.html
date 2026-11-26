@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Backoffice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+  <header class="navbar">
+    <h2>Backoffice</h2>
+    <div class="navbar-user">
+      <span id="userGreeting" class="user-greeting"></span>
+      <button id="logoutBtn" class="cerrar">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main class="proyectos-container">
+    <div class="proyectos-header">
+      <h1>Mis Proyectos</h1>
+      <button id="openModalBtn" class="agregar">+ Agregar Proyecto</button>
+    </div>
+
+    <div id="homeMessage" class="mensaje hidden"></div>
+
+    <section id="projectsGrid" class="ejemplos-grid">
+      <p class="estado-lista">Cargando proyectos...</p>
+    </section>
+  </main>
+
+  <div id="projectModal" class="agregar-proyecto-modal hidden">
+    <div class="agregar-proyecto-content">
+      <h2 id="modalTitle">Agregar Proyecto</h2>
+      <form id="projectForm">
+        <div>
+          <label for="projectTitle">Título del proyecto</label>
+          <input type="text" id="projectTitle" placeholder="Ej. Sistema de inventario" required>
+        </div>
+        <div>
+          <label for="projectDesc">Descripción</label>
+          <textarea id="projectDesc" rows="3" placeholder="Breve descripción del proyecto" required></textarea>
+        </div>
+        <div>
+          <label for="projectTech">Tecnologías</label>
+          <input type="text" id="projectTech" placeholder="React, Node, MongoDB" required>
+        </div>
+        <div>
+          <label for="projectRepo">URL del repositorio</label>
+          <input type="url" id="projectRepo" placeholder="https://github.com/usuario/proyecto">
+        </div>
+        <div>
+          <div>
+            <label for="projectImages">URLs de imágenes</label>
+            <input type="text" id="projectImages" placeholder="https://ejemplo.com/img1.png">
+          </div>
+        </div>
+        <div class="cancelar-guardar">
+          <button type="button" id="closeModalBtn" class="cancelar">Cancelar</button>
+          <button type="submit" class="guardar">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="detailModal" class="agregar-proyecto-modal hidden">
+    <div class="agregar-proyecto-content">
+      <h2>Detalle del Proyecto</h2>
+      <div id="detailContent" class="detalle-contenido"></div>
+      <div class="cancelar-guardar">
+        <button type="button" id="closeDetailModalBtn" class="guardar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
